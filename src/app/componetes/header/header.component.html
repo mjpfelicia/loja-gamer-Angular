@@ -1,0 +1,69 @@
+<mat-toolbar fxLayout="column" fxLayout.gt-sm="row" fxLayoutJustify="center" class="header">
+    <div class="container">
+        <div>
+            <a routerLink="/" class="logo">
+                <img src="assets/imagens/logoes.png" alt="logoes">
+            </a>
+        </div>
+        <div fxHide.gt-sm>
+            <button mat-icon-button id="toggle" (click)="onToggleSidenav()">
+                <mat-icon>menu</mat-icon>
+            </button>
+        </div>
+
+        <div fxLayoutAlign.gt-md="center center" fxHide.sm fxHide.xs class="content-menu">
+            
+                <div class="menu-container">
+                    <div class="menu-link-deparmento">
+                        <a routerLink="">Departamentos</a>
+                    </div>
+                    <div class="menu-link">
+                        <a href="#">Destaques</a>
+                    </div>
+                    <div class="menu-link">
+                        <a routerLink="/">
+                            Contatos
+                        </a>
+                    </div>
+                    <div id="show" (click)="showMessage()" class="menu-link">
+                        <mat-icon>arrow_drop_down</mat-icon>
+                    </div>
+
+                    <div class="menu-link">
+                        <ul *ngIf="show" [ngClass]="dropdownMenu">
+                            <li><a routerLink="/" class="dropdown-item">Telefones</a></li>
+                            <li><a routerLink="/" class="dropdown-item">Endereço</a></li>
+                            <li><a routerLink="/" class="dropdownItemBorde">Parceiros</a></li>
+                        </ul>
+                    </div>
+                </div>
+          
+            <div class="input-group mb-0">
+                <input type="text" class="form-control" placeholder="Pesquisar produtos">
+                <button class="btn-lupa" type="button">
+                    <mat-icon class="svgLupa">search</mat-icon>
+                </button>
+            </div>
+            <div class="container-group">
+                <div class="group-login">
+                    <a routerLink="/logim">
+                        <mat-icon>favorite_border</mat-icon>
+                    </a>
+                </div>
+                <div class="group-login">
+                    <a routerLink="/logim">
+                        <mat-icon aria-hidden="false" aria-label="Chave">person</mat-icon>
+                        Login
+                    </a>
+                </div>
+                <div class="group-login">
+                    <a routerLink="/carrinho">
+                        <mat-icon aria-hidden="false" aria-label="Chave">shopping_cart_checkout</mat-icon>
+                        Carrinho
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</mat-toolbar>

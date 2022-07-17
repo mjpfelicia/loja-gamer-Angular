@@ -1,0 +1,140 @@
+.content-login {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    background: var(--cor-azul-escuro);
+    padding: 5rem;
+
+}
+
+.tab-group {
+    display: flex;
+    margin: 0 auto;
+    flex-direction: column;
+    position: relative;
+    width: 90%;
+    pointer-events: auto;
+    background-color: var(--cor-branco);
+    background-clip: padding-box;
+    border: 1px solid rgba(0, 0, 0, 0);
+    border-radius: 0;
+    outline: 0;
+    border-radius: 20px;
+}
+
+.tab-group {
+    padding: 0 2rem;
+}
+
+.entrar-tab {
+    color: var(--cor-vermelho-claro);
+}
+
+.linha {
+    margin: 2rem auto;
+    height: 1px;
+    width: 90%;
+    background-color: var(--cor-border);
+    opacity: .25;
+}
+
+.form-control {
+    display: block;
+    width: 100%;
+    padding: 0.375rem 0.75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.6;
+    color: var(--cor-cinzento-title);
+    background-color: var(--cor-branco);
+    border: 1px solid var(--cor-border);
+    border-radius: 0.375rem;
+    margin-top: 0.6rem;
+    outline: none;
+}
+
+.btn {
+    display: inline-block;
+    width: 100%;
+    font-weight: 400;
+    line-height: 1.6;
+    text-align: center;
+    vertical-align: middle;
+    cursor: pointer;
+    background-color: transparent;
+    border: 1px solid transparent;
+    color: var(--cor-cinzento-title);
+    border-color: var(--cor-cinza);
+    padding: 0.525rem 0.75rem;
+    font-size: .8rem;
+    border-radius: 0;
+    transition: color 0.15s ease-in-out;
+    letter-spacing: .3em;
+    text-transform: uppercase;
+
+}
+
+.whapper {
+    margin-bottom: 1rem;
+}
+
+.form-label {
+    color: var(--cor-cinzento-title);
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.btn:hover {
+    background: var(--cor-vermelho-claro);
+    color: var(--cor-branco);
+}
+
+.btn-rede {
+    border: 1px solid var(--cor-azul);
+    border-radius: 5px;
+    width: 10%;
+}
+
+.btn-rede2 {
+    border: 1px solid var(--cor-border);
+    border-radius: 5px;
+    width: 10%;
+
+}
+
+.form-check {
+    display: block;
+    min-height: 1.6rem;
+    margin-bottom: 0.125rem;
+}
+
+.form-check-label {
+    padding-left: .8rem;
+}
+
+.conecte-se {
+    display: flex;
+    justify-content: center;
+    gap: .9rem;
+    padding-bottom: 1rem;
+}
+
+.mat-icon {
+    fill: var(--cor-ciano-brilhante);
+}
+
+.icon-red {
+    color: var(--cor-vermelho-claro);
+    padding-top: .2rem;
+}
+
+.icon-facebook {
+    color: var(--cor-azul);
+}
+
+.erro,
+.msgError,
+.msgErrorSenha {
+    display: none;
+}

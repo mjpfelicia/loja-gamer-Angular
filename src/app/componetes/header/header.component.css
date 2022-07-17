@@ -1,0 +1,137 @@
+.header {
+    background: var(--cor-azul-acinzentado-claro);
+    height: 100px;
+    justify-content: center;
+    flex-basis: auto;
+
+}
+
+.content-menu {
+    width: 100%;
+}
+
+.menu-container a,
+.group-login a {
+    text-decoration: none;
+}
+
+.menu-link a {
+    color: var(--cor-link-nav);
+    font-size: 1rem;
+}
+
+.menu-link-deparmento a {
+    color: var(--cor-azul-escuro);
+    font-size: 1rem;
+}
+
+.mat-icon {
+    fill: var(--cor-link-nav);
+}
+
+.mat-icon {
+    padding-top: 0.2rem;
+}
+
+.container {
+    max-width: 1320px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+}
+
+.container-group {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    gap: 1rem;
+}
+
+.menu-container {
+    display: flex;
+    gap: 1rem;
+    padding-left: 2rem;
+}
+
+.logo img {
+    width: 13rem;
+}
+
+.input-group {
+    position: relative;
+    width: 30rem;
+}
+
+.form-control {
+    display: block;
+    width: 100%;
+    padding: 0.375rem 0.75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: var(--cor-azul-escuro);
+    background-color: var(--cor-branco);
+    border: 1px solid var(--cor-border);
+    border-radius: 0.375rem;
+    transition: .15s ease-in-out;
+}
+
+.group-login a {
+    display: flex;
+    align-items: center;
+    color: var(--cor-vermelho-claro);
+}
+
+.btn-lupa {
+    display: flex;
+    align-items: center;
+    padding: 0.275rem 0.75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #212529;
+    text-align: center;
+    background-color: #e9ecef;
+    border: 1px solid #ced4da;
+    border-radius: 0 0.375rem 0.375rem 0;
+}
+
+
+.dropdown-menu {
+    position: absolute;
+    width: 14%;
+    top: 10%;
+    list-style: none;
+    background: white;
+    border-radius: 5px;
+    border: 1px solid hsl(219deg 20% 90%);
+    z-index: 100;
+}
+
+.dropdown-item {
+    display: block;
+    padding: 5px 30px;
+    font-weight: 400;
+    text-decoration: none;
+    border-bottom: 1px solid hsl(219deg 20% 90%);
+}
+
+.dropdownItemBorde {
+    display: block;
+    padding: 5px 30px;
+    font-weight: 400;
+    text-decoration: none;
+}
+
+@media only screen and (max-width: 600px) {
+    .mat-toolbar-single-row {
+        justify-content: flex-start;
+        align-items: flex-start;
+        padding: 1rem 0;
+
+
+    }
+    
+}
