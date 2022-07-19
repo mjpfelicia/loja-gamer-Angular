@@ -1,0 +1,21 @@
+<div class="content-queridinhos">
+    <div fxLayout="row" fxLayoutAlign="space-around center">
+        <h2 class="title-queridinhos">OS QUERIDINHOS DO MOMENTO</h2>
+        <div fxLayoutAlign="center" class="title-vejamais">
+            <a href="#" class="text-danger link-vejamais">veja mais
+            </a>
+            <mat-icon>chevron_right</mat-icon>
+        </div>
+    </div>
+
+    <div class="whapper__container">
+        <div class="container">
+            <div fxLayout="flex wrap" fxLayoutAlign="space-between none">
+                <div fxFlex="25" fxFlex.sm="50%" fxFlex.xs="100%" *ngFor="let produto of produtos;"
+                    class="card px-2">
+                        <app-cardqueridinhos [produto]="produto"></app-cardqueridinhos>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

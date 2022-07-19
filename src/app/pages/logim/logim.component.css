@@ -27,9 +27,6 @@
     padding: 0 2rem;
 }
 
-.entrar-tab {
-    color: var(--cor-vermelho-claro);
-}
 
 .linha {
     margin: 2rem auto;
@@ -137,4 +134,16 @@
 .msgError,
 .msgErrorSenha {
     display: none;
+    color: var(--cor-vermelho-claro);
 }
+.errors{
+    border-left: 3px solid var(--cor-vermelho-claro);
+    padding-left: .2em;
+    color:var(--cor-vermelho-claro);
+}
+
+.conteudo-senha{
+    display: flex;
+    justify-content: space-between;
+}
+

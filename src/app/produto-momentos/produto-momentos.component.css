@@ -1,15 +1,6 @@
-a {
+ a {
     list-style: none;
     text-decoration: none;
-}
-
-.conteudo-vendas {
-    background-color: var(--cor-branco);
-}
-
-.wapper-produtos {
-    padding: 1rem;
-    text-align: center;
 }
 
 .card {
@@ -17,13 +8,13 @@ a {
     border: 1px solid var(--cor-azul-acinzentado-claro);
 
 }
-
-.title-oportunidade {
+.title-queridinhos {
     color: var(--cor-cinzento-title);
     font-weight: 600;
     opacity: 0.9;
     padding: 1rem;
     font-size: calc(1.2rem + .9vw);
+    cursor: pointer;
 }
 
 .title-vejamais {
@@ -37,10 +28,8 @@ a {
        padding: 4rem 2rem ;
 }
 
-.container-produtos img {
-    width: 50%;
-    align-self: center;
-}
+
+
 
 @media only screen and (max-width: 600px) {
     .container-produtos {
@@ -53,11 +42,12 @@ a {
         text-align: center;
     }
     .whapper__container {
-           margin: 0;
-           padding: 4rem 1rem ;
+           margin: 0 ;
+           padding: 4rem 1rem;
     }
-    .title-oportunidade, .title-vejamais{
+    .title-queridinhos, .title-vejamais{
         font-size: .9rem;
         margin: 0px;
     }
+
 }

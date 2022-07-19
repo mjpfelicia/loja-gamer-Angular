@@ -1,77 +1,82 @@
 <div class="content-login">
     <mat-tab-group class="tab-group">
         <mat-tab label="Entrar" class="entrar-tab">
-            <div id="loginTabLink" class="box-content">
-                <form id="form" action="/index.html" onsubmit="return false;">
-                    <div class="whapper">
-                        <label class="form-label" for="email">Email</label>
-                        <input class="form-control" id="email" type="text">
+            <form id="form" action="/index.html" onsubmit="return false;" (ngSubmit)="submit()"
+                [formGroup]="logimComponent" #formDir="ngForm">
+                <div class="whapper">
+                    <label class="form-label" for="description">Email</label>
+                    <input class="form-control" id="email" type="text" formControlName="email" required>
+                </div>
+                <div *ngIf="email.invalid && formDir.submitted">
+                    <p *ngIf="email.errors?.['required']" class="errors">O endereço de e-mail não pode estar vazio</p>
+                </div>
+                <div class="whapper">
+                    <div class="conteudo-senha">
+                        <label class="form-label" for="description">Senha</label>
+                        <a class="form-text" href="#">Esqueceu a senha?</a>
                     </div>
-                    <p class="msgError">O endereço de e-mail não pode estar vazio</p>
-                    <div class="whapper">
-                        <div class="row">
-                            <div class="col">
-                                <label class="form-label" for="loginSenha">Senha</label>
-                            </div>
-                            <div class="col-auto">
-                                <a class="form-text small" href="#">Esqueceu a senha?</a>
-                            </div>
-                        </div>
-                        <input class="form-control" name="loginSenha" id="loginSenha" placeholder="Senha"
-                            type="password">
+                    <input class="form-control" name="loginSenha" id="Senha" placeholder="Senha" type="password"
+                        formControlName="senha" required>
+                    <div *ngIf="senha.invalid && formDir.submitted" class="errors">
+                        <p *ngIf="senha.errors?.['required']">Preencha este campo corretamente.</p>
                     </div>
-                    <p class="msgErrorSenha">Preencha este campo corretamente.</p>
-                    <div class="whapper">
-                        <div class="form-check">
-                            <input class="form-check-input" id="login-lembre" type="checkbox">
-                            <label class="form-check-label" for="login-lembre">
-                                <span class="text-sm">Lembre-ne</span></label>
-                        </div>
+                </div>
+                <div class="whapper">
+                    <div class="form-check">
+                        <input class="form-check-input" id="login-lembre" type="checkbox" required>
+                        <label class="form-check-label" for="login-lembre">
+                            <span class="text-sm">Lembre-ne</span></label>
                     </div>
-                    <div class="d-grid whapper">
-                        <button id="buttonEnviarmsgError" class="btn" type="submit">
-                            <mat-icon class="icon-red">login</mat-icon>
-                            Entrar
-                        </button>
-                    </div>
-                </form>
-                <hr class="linha">
-                <div class="text-center conecte-se">
-                    <button class="btn btn-rede" matTooltip="Conecte-se com o facebook"
-                        aria-label="Conecte-se com o facebook"matTooltipPosition="above">
-                        <mat-icon class="icon-facebook">facebook</mat-icon>
-                    </button>
-                    <button class="btn btn-rede2" matTooltip="Conecte-se com o Google"
-                        aria-label="Conecte-se com o Google" matTooltipPosition="above">
-                        <svg style="width:24px;height:24px" viewBox="0 0 24 24">
-                            <path fill="currentColor" d="M21.35,11.1H12.18V13.83H18.69C18.36,17.64 15.19,19.27 12.19,19.27C8.36,19.27 5,16.25 5,12C5,7.9 8.2,4.73 12.2,4.73C15.29,4.73 17.1,6.7 17.1,6.7L19,4.72C19,4.72 16.56,2 12.1,2C6.42,2 2.03,6.8 2.03,12C2.03,17.05 6.16,22 12.25,22C17.6,22 21.5,18.33 21.5,12.91C21.5,11.76 21.35,11.1 21.35,11.1V11.1Z" />
-                        </svg>
+                </div>
+                <div class="d-grid whapper">
+                    <button id="buttonEnviarmsgError" class="btn" type="submit">
+                        <mat-icon class="icon-red">login</mat-icon>
+                        Entrar
                     </button>
                 </div>
+            </form>
+            <hr class="linha">
+            <div class="text-center conecte-se">
+                <button class="btn btn-rede" matTooltip="Conecte-se com o facebook"
+                    aria-label="Conecte-se com o facebook" matTooltipPosition="above">
+                    <mat-icon class="icon-facebook">facebook</mat-icon>
+                </button>
+                <button class="btn btn-rede2" matTooltip="Conecte-se com o Google" aria-label="Conecte-se com o Google"
+                    matTooltipPosition="above">
+                    <svg style="width:24px;height:24px" viewBox="0 0 24 24">
+                        <path fill="currentColor"
+                            d="M21.35,11.1H12.18V13.83H18.69C18.36,17.64 15.19,19.27 12.19,19.27C8.36,19.27 5,16.25 5,12C5,7.9 8.2,4.73 12.2,4.73C15.29,4.73 17.1,6.7 17.1,6.7L19,4.72C19,4.72 16.56,2 12.1,2C6.42,2 2.03,6.8 2.03,12C2.03,17.05 6.16,22 12.25,22C17.6,22 21.5,18.33 21.5,12.91C21.5,11.76 21.35,11.1 21.35,11.1V11.1Z" />
+                    </svg>
+                </button>
             </div>
-            |
         </mat-tab>
         <mat-tab label="Cadastra">
             <div id="loginTabCadastro" class="cadastra-tab">
-                <form action="/index.html" onsubmit="return false;">
+                <form id="form" action="/index.html "onsubmit="return false;" (ngSubmit)="submit()"
+                [formGroup]="logimComponent" #formDir="ngForm">
+                
                     <div class="whapper">
                         <label class="form-label" for="registerName">Nome</label>
-                        <input class="form-control" id="registerName" type="text">
+                        <input class="form-control" id="registerName" type="text" formControlName="nome">
                     </div>
-                    <p class="msgErrorNome erro">Preencha este campo corretamente.</p>
+                  
                     <div class="whapper">
                         <label class="form-label" for="registerEmail">Email</label>
-                        <input class="form-control" id="registerEmail" type="text">
+                        <input class="form-control" id="registerEmail" type="text" formControlName="email">
                     </div>
-                    <p class="msgErrorcadastroEmail erro">Preencha um e-mail válido</p>
+                    <div *ngIf="email.invalid && formDir.submitted">
+                        <p *ngIf="email.errors?.['required']" class="errors">O endereço de e-mail não pode estar vazio</p>
+                    </div>
+
                     <div class="whapper">
                         <label class="form-label" for="registerPassword">Senha</label>
-                        <input class="form-control" id="registerPassword" type="password">
+                        <input class="form-control" id="registerPassword" type="password"
+                            formControlName="registerEmail">
                     </div>
                     <p class="msgErrorSenhacadastro erro">Preencha este campo corretamente.</p>
 
                     <div class="d-grid mb-3 text-center">
-                        <button id="buttonEnviarmsgErrorCadastro" class="btn">
+                        <button id="buttonEnviarmsgErrorCadastro" class="btn" type="submit">
                             <mat-icon class="icon-red">person</mat-icon>
                             CADASTRO
                         </button>
@@ -80,13 +85,14 @@
                 <hr class="linha">
                 <div class="text-center conecte-se">
                     <button class="btn btn-rede" matTooltip="Conecte-se com o facebook"
-                        aria-label="Conecte-se com o facebook"matTooltipPosition="above">
+                        aria-label="Conecte-se com o facebook" matTooltipPosition="above">
                         <mat-icon class="icon-facebook">facebook</mat-icon>
                     </button>
                     <button class="btn btn-rede2" matTooltip="Conecte-se com o Google"
                         aria-label="Conecte-se com o Google" matTooltipPosition="above">
                         <svg style="width:24px;height:24px" viewBox="0 0 24 24">
-                            <path fill="currentColor" d="M21.35,11.1H12.18V13.83H18.69C18.36,17.64 15.19,19.27 12.19,19.27C8.36,19.27 5,16.25 5,12C5,7.9 8.2,4.73 12.2,4.73C15.29,4.73 17.1,6.7 17.1,6.7L19,4.72C19,4.72 16.56,2 12.1,2C6.42,2 2.03,6.8 2.03,12C2.03,17.05 6.16,22 12.25,22C17.6,22 21.5,18.33 21.5,12.91C21.5,11.76 21.35,11.1 21.35,11.1V11.1Z" />
+                            <path fill="currentColor"
+                                d="M21.35,11.1H12.18V13.83H18.69C18.36,17.64 15.19,19.27 12.19,19.27C8.36,19.27 5,16.25 5,12C5,7.9 8.2,4.73 12.2,4.73C15.29,4.73 17.1,6.7 17.1,6.7L19,4.72C19,4.72 16.56,2 12.1,2C6.42,2 2.03,6.8 2.03,12C2.03,17.05 6.16,22 12.25,22C17.6,22 21.5,18.33 21.5,12.91C21.5,11.76 21.35,11.1 21.35,11.1V11.1Z" />
                         </svg>
                     </button>
                 </div>

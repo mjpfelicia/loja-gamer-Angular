@@ -5,7 +5,7 @@
         <img [src]="image.imageSrc" [alt]="image.imageAlt"
         [ngClass]="{'image-active': selectedIndex === i}" class="fade">
 
-        <p [ngClass]="{'active': selectedIndex === i}" mat-raised color="primary">
+        <p class="text-carousel-control" [ngClass]="{'active': selectedIndex === i}" mat-raised>
             <strong> {{image.description}} </strong>
         </p>
         
