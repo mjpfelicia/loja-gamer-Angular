@@ -1,0 +1,29 @@
+<div class="card-wrapper" *ngIf="produto" fxLayoutJustify="center" >
+  <mat-card class="card">
+    <mat-card-header>
+      <mat-card-subtitle class="desconto">{{produto.detalhe}}</mat-card-subtitle>
+      <img mat-card-image [src]="produto.imageSrc" alt="imageSrc" class="card-img-top">
+    </mat-card-header>
+
+    <mat-card-content class="card-content" id="cardContent">
+      <mat-card-title matTooltip = {{produto.title}} class="card-title">
+        {{produto.title}}
+      </mat-card-title>
+      
+           <mat-list role="list">
+        <mat-list-item role="listitem" class="mat-card-item-precoAtual">DE R$:{{produto.precoSemDescont}} por:</mat-list-item>
+        <mat-list-item role="listitem" class="mat-card-item-precoDesconto">R${{produto.precoComDescont}}</mat-list-item>
+        <mat-list-item role="listitem">à vista</mat-list-item>
+      </mat-list>
+    </mat-card-content>
+
+    <mat-card-actions class="mat-card-actions">
+      <button mat-button type="button" class="btn btn-comprar">Comprar</button>
+    </mat-card-actions>
+  </mat-card>
+
+</div>
+
+<div>
+
+  

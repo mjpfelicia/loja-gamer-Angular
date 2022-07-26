@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { CardProduto } from 'src/app/card/card.component';
-import { CarroselImage } from '../../carousel/carrosel.component'
+import { CardProduto } from 'src/app/Component /card/card.component';
+import { CarroselImage } from '../../Component /carousel/carrosel.component'
 
 @Component({
   selector: 'app-home',
