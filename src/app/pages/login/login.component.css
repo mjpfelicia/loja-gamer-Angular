@@ -90,13 +90,13 @@
 .btn-rede {
     border: 1px solid var(--cor-azul);
     border-radius: 5px;
-    width: 10%;
+    width: 15%;
 }
 
 .btn-rede2 {
     border: 1px solid var(--cor-border);
     border-radius: 5px;
-    width: 10%;
+    width: 15%;
 
 }
 
@@ -113,12 +113,10 @@
 .conecte-se {
     display: flex;
     justify-content: center;
+    align-items: center;
+    text-align: center;
     gap: .9rem;
     padding-bottom: 1rem;
-}
-
-.mat-icon {
-    fill: var(--cor-ciano-brilhante);
 }
 
 .icon-red {
@@ -126,8 +124,13 @@
     padding-top: .2rem;
 }
 
+
 .icon-facebook {
     color: var(--cor-azul);
+}
+
+.icon-facebook:hover {
+    color: var(--cor-branco);
 }
 
 .erro,
@@ -136,14 +139,14 @@
     display: none;
     color: var(--cor-vermelho-claro);
 }
-.errors{
+
+.errors {
     border-left: 3px solid var(--cor-vermelho-claro);
     padding-left: .2em;
-    color:var(--cor-vermelho-claro);
+    color: var(--cor-vermelho-claro);
 }
 
-.conteudo-senha{
+.conteudo-senha {
     display: flex;
     justify-content: space-between;
 }
-

@@ -32,12 +32,6 @@ import { CarroselMarcasComponent } from './Component /carrosel-marcas/carrosel-m
 import { CarroselLancamentoComponent } from './Component /carrosel-lancamento/carrosel-lancamento.component';
 import { DestaqueComponent } from './Component /destaque/destaque.component';
 
-
-
-
-
-
-
 @NgModule({
   declarations: [
     AppComponent,

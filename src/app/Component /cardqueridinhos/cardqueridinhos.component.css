@@ -103,3 +103,10 @@ color: var(--cor-verde-limao);
     justify-content: center;
     align-items: center;
 }
+
+.custom-tooltip ~ .tooltip > .tooltip-inner
+{
+    text-align: left;
+    max-width: 500px;
+    color: brown;
+}

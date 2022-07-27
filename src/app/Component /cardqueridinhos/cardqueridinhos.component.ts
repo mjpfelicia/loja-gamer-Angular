@@ -1,4 +1,6 @@
 import { Component, OnInit,Input } from '@angular/core';
+import { Tooltip } from 'bootstrap'
+
 
 
 export interface CardProduto {
@@ -30,6 +32,8 @@ export class CardqueridinhosComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+    const tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+    tooltipTriggerList.forEach(t => new Tooltip(t)) 
   }
 
 }

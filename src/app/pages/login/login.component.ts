@@ -2,6 +2,7 @@ import { Component, OnInit, Input } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 
 
+
 export interface LogimComponent {
   id?: string;
   class: string;
@@ -19,15 +20,17 @@ export class LogimComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+    
     this.logimComponent = new FormGroup({
       id: new FormControl(''),
       nome:new FormControl(''),
       email:new FormControl('', [Validators.required]),
       description: new FormControl('', [Validators.required]),
       senha: new FormControl('', [Validators.required]),
-
+     
     });
   }
+  
 
 
   get email() {
@@ -56,6 +59,7 @@ export class LogimComponent implements OnInit {
       return
     }
   }
+
 
 
 }
