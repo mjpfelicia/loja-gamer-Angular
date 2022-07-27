@@ -1,4 +1,4 @@
-<div class="conteudo-titulo">
+<div class="conteudo-titulo p-4 fs-base">
     <h2 class="title-lancamento">LANÇAMENTOS</h2>
 </div>
 <div class="lancamento">   
@@ -6,7 +6,7 @@
 
         <div *ngFor="let image of images; let i=index" class="carousel-control-images">
             <img [src]="image.imageSrc" [alt]="image.imageAlt" [ngClass]="{'image-active': selectedIndex === i}"
-                class="fade">
+                >
 
             <p class="text-carousel-control" [ngClass]="{'active': selectedIndex === i}" mat-raised>
                 <strong> {{image.description}} </strong>

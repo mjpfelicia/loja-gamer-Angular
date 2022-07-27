@@ -1,69 +1,74 @@
-<mat-toolbar fxLayout="column" fxLayout.gt-sm="row" fxLayoutJustify="center" class="header">
-    <div class="container">
-        <div>
-            <a routerLink="/" class="logo">
-                <img src="assets/imagens/logoes.png" alt="logoes">
-            </a>
-        </div>
-        <div fxHide.gt-sm>
-            <button mat-icon-button id="toggle" (click)="onToggleSidenav()">
-                <mat-icon>menu</mat-icon>
-            </button>
-        </div>
-
-        <div fxLayoutAlign.gt-md="center center" fxHide.sm fxHide.xs class="content-menu">
-            
-                <div class="menu-container">
-                    <div class="menu-link-deparmento">
-                        <a routerLink="">Departamentos</a>
-                    </div>
-                    <div class="menu-link">
-                        <a href="#">Destaques</a>
-                    </div>
-                    <div class="menu-link">
-                        <a routerLink="/">
-                            Contatos
-                        </a>
-                    </div>
-                    <div (click)="showMessage()" class="menu-link">
-                        <mat-icon>arrow_drop_down</mat-icon>
-                    </div>
-
-                    <div class="menu-link">
-                        <ul *ngIf="show" [ngClass]="dropdownMenu">
-                            <li><a routerLink="/" class="dropdown-item">Telefones</a></li>
-                            <li><a routerLink="/" class="dropdown-item">Endereço</a></li>
-                            <li><a routerLink="/" class="dropdownItemBorde">Parceiros</a></li>
-                        </ul>
-                    </div>
+<header class="header">
+    <div class="container-fluid py-3">
+        <div class="container">
+            <nav class="navbar navbar-expand-lg align-items-center">
+                <div class="content-logo">
+                    <a routerLink="/" class="logo">
+                        <img class="logo w-75" src="assets/imagens/logoes.png" alt="logoes">
+                    </a>
                 </div>
-          
-            <div class="input-group mb-0">
-                <input type="text" class="form-control" placeholder="Pesquisar produtos">
-                <button class="btn-lupa" type="button">
-                    <mat-icon class="svgLupa">search</mat-icon>
+                <button class="navbar-toggler menu-bars collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <mat-icon>menu</mat-icon>
                 </button>
-            </div>
-            <div class="container-group">
-                <div class="group-login">
-                    <a routerLink="/logim">
-                        <mat-icon>favorite_border</mat-icon>
-                    </a>
-                </div>
-                <div class="group-login">
-                    <a routerLink="/logim">
-                        <mat-icon aria-hidden="false" aria-label="Chave">person</mat-icon>
-                        Login
-                    </a>
-                </div>
-                <div class="group-login">
-                    <a routerLink="/carrinho">
-                        <mat-icon aria-hidden="false" aria-label="Chave">shopping_cart_checkout</mat-icon>
-                        Carrinho
-                    </a>
-                </div>
-            </div>
 
+                <div class="navbar-collapse w-100 collapse" id="navbarCollapse">
+                    <div class="navbar-nav">
+                        <div class="nav-item">
+                            <a class="nav-link active departamento" aria-current="page" href="#">Departamentos</a>
+                        </div>
+                        <div class="nav-item">
+                            <a class="nav-link" href="#">Destaques</a>
+                        </div>
+
+                        <div class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                Contatos
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                <li><a class="dropdown-item border-bottom" href="#">Telefones</a></li>
+                                <li><a class="dropdown-item border-bottom" href="#">Endereço</a></li>
+                                <li><a class="dropdown-item" href="#">Parceiros</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="input-group mb-0">
+                        <input type="text" class="form-control" placeholder="Pesquisar produtos"
+                            aria-label="Pesquisar produtos" aria-describedby="basic-addon2">
+                        <p class="input-group-text mb-0" id="basic-addon2">
+                            <img class="svgLupa" src="assets/imagens/search.svg" alt="svgLupa">
+                        </p>
+                    </div>
+
+                    <div class="navbar-nav flex-row d-flex card-icons-header">
+                        <div class="nav-item ms-lg-n4 d-flex align-items-center">
+                            <a class="nav-link" href="#">
+                                <mat-icon>favorite_border</mat-icon>
+                            </a>
+                        </div>
+                        <div class="nav-item ms-lg-n4 d-flex align-items-center">
+                            <a routerLink="/logim">
+                                <mat-icon aria-hidden="false" aria-label="Chave">person</mat-icon>
+                            </a>
+                            <span class="span-icon">login</span>
+                        </div>
+                        <div class="nav-item ms-lg-n4 d-flex align-items-center">
+                            <a routerLink="/carrinho" class="nav-link position-relative">
+                                <span id="contadorProduto"
+                                    class="position-absolute translate-middle badge rounded-pill bg-danger">
+                                </span>
+                                <mat-icon aria-hidden="false" aria-label="Chave" data-bs-toggle="modal"
+                                    data-bs-target="#exampleModal">shopping_cart_checkout</mat-icon>
+                                </a>
+                                <span class="span-icon">carrinho</span>
+                        </div>
+
+                    </div>
+                </div>
+
+            </nav>
         </div>
     </div>
-</mat-toolbar>
+</header>

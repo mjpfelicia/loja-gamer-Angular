@@ -25,14 +25,14 @@ export class CarroselComponent implements OnInit {
 
   ngOnInit(): void {
 
-    if (this.autoSlide){
+    if (this.autoSlide) {
       this.autoSliderImages();
     }
   }
   autoSliderImages(): void {
     setInterval(() => {
       this.onNextClick();
-    },this.slideInterval);
+    }, this.slideInterval);
   }
 
 

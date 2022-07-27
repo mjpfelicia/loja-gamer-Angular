@@ -1,3 +1,51 @@
-<div class="whapper">
-    <p>carrinho works!</p>
+
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-xl modal-dialog-scrollable">
+        <div class="modal-header bg-white">
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+            </button>
+        </div>
+        <div class="modal-dialog" role="document">
+            <div class="modal-content sidebar-cart-content">
+                <div class="modal-body px-5 sidebar-cart-body">
+                    <div
+                        class="sidebar-cart-product-wrapper custom-scrollbar mCustomScrollbar _mCS_1">
+                        <div id="mCSB_1"
+                            class="mCustomScrollBox mCS-dark-thin mCSB_vertical mCSB_inside"
+                            style="max-height: 502px;" tabindex="0">
+                            <div id="mCSB_1_container" class="mCSB_container"
+                                style="position:relative; top:0; left:0;" dir="ltr">
+                                <!-- cart item-->
+                                <ul id="carrinho" class="carrinoCechout"></ul>
+                            </div>
+                            <div id="mCSB_1_scrollbar_vertical"
+                                class="mCSB_scrollTools mCSB_1_scrollbar mCS-dark-thin mCSB_scrollTools_vertical"
+                                style="display: block;">
+                                <div class="mCSB_draggerContainer">
+                                    <div id="mCSB_1_dragger_vertical" class="mCSB_dragger"
+                                        style="position:absolute;min-height:30px;top:0px;display:block;height:313px;max-height:492px;">
+                                        <div class="mCSB_dragger_bar"
+                                            style="line-height: 30px;"></div>
+                                        <div class="mCSB_draggerRail"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer sidebar-cart-footer shadow">
+                    <div class="w-100">
+                        <h3>
+                            <span>Total:<strong id="total">0</strong>
+                            </span>
+                        </h3>
+                        <div class="d-grid gap-3">
+                            <a class="btn btn-danger" href="#">Confira</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
 </div>

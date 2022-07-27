@@ -1,28 +1,6 @@
-.whaperDestaques{
-padding-top: 3rem;
-max-width: 1245px;
-}
+
 a{
     text-decoration: none;
-}
-.mat-typography h6{
-    margin: 0 0 0;
-}
-h3{
-    font-size: 1.75rem;
-    margin-bottom: 1.5rem;
-    font-weight: 500;
-    line-height: 1.2;
-    color: var(--cor-cinzento-title);
-
-}
-h6 {
-    font-size:1rem;
-    margin: 0 0 0px;
-    margin-bottom: 0.5rem;
-    font-weight: 500;
-    line-height: 1.2;
-    color: var(--cor-azul-claro);
 }
 .widget-product-title a {
     color: var(--cor-cinzento-title);
