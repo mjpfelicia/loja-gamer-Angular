@@ -9,15 +9,18 @@
     text-decoration: none;
     transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out;
 }
+
 .departamento{
     color: var(--cor-active-color);
 }
+
 .mat-icon{
     color: var(--cor-vermelho-claro);
     font-size: 2rem;
     height: 35px;
     width: 35px;
 }
+
 .span-icon{
     color: var(--cor-vermelho-claro);
 

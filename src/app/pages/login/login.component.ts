@@ -16,43 +16,35 @@ export interface LogimComponent {
 })
 export class LogimComponent implements OnInit {
   logimComponent!: FormGroup;
+  
+  
 
   constructor() { }
 
   ngOnInit(): void {
-    
+
     this.logimComponent = new FormGroup({
       id: new FormControl(''),
-      nome:new FormControl(''),
-      email:new FormControl('', [Validators.required]),
+      nome: new FormControl(''),
+      email: new FormControl('', [Validators.required]),
       description: new FormControl('', [Validators.required]),
       senha: new FormControl('', [Validators.required]),
-     
+
     });
   }
-  
-
-
   get email() {
     return this.logimComponent.get('email')!;
   }
-
-
-  get Description( ) {
+  get Description() {
     return this.logimComponent.get('description')!;
   }
-
-
-  get senha(  ) {
+  get senha() {
     return this.logimComponent.get('senha')!;
   }
-
 
   get nome() {
     return this.logimComponent.get('nome')!;
   }
-
-
 
   submit(): void {
     if (this.logimComponent.validator) {
@@ -60,6 +52,13 @@ export class LogimComponent implements OnInit {
     }
   }
 
+  submitCadastro() : void{
+    console.log('Formulário válido');
+    console.log(this.logimComponent)
+    if (this.logimComponent.validator) {
+      return
+    }
+}
 
 
 }

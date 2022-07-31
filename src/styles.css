@@ -9,6 +9,7 @@
 body {
     font-family: "Roboto", "Helvetica Neue", sans-serif;
     height: 100%;
+    cursor: pointer;
 }
 
 :root {
@@ -49,7 +50,7 @@ body {
 }
 
 
-a {
+/* a {
     text-decoration: underline;
     transition: 4s;
 }
@@ -57,7 +58,7 @@ a {
 li {
     text-decoration: none;
     list-style: none;
-}
+} */
 img{
     width: 100;
 }

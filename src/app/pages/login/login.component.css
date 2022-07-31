@@ -4,8 +4,8 @@
     align-items: center;
     height: 100%;
     background: var(--cor-azul-escuro);
-    padding: 5rem;
-
+    padding: 3rem;
+    cursor: pointer;
 }
 
 .tab-group {
@@ -23,8 +23,21 @@
     border-radius: 20px;
 }
 
-.tab-group {
-    padding: 0 2rem;
+.nav-tabs {
+    padding-top: 2rem;
+}
+
+.cor-cadastra-tab {
+    color: var(--cor-vermelho-claro);
+    font-size: 1.1rem;
+    text-transform: uppercase;
+}
+
+.cor-entra-tab.active,
+.nav-tab {
+    color: var(--cor-verde-limao);
+    font-size: 1.1rem;
+    text-transform: uppercase;
 }
 
 
@@ -36,20 +49,8 @@
     opacity: .25;
 }
 
-.form-control {
-    display: block;
-    width: 100%;
-    padding: 0.375rem 0.75rem;
-    font-size: 1rem;
-    font-weight: 400;
-    line-height: 1.6;
-    color: var(--cor-cinzento-title);
-    background-color: var(--cor-branco);
-    border: 1px solid var(--cor-border);
-    border-radius: 0.375rem;
-    margin-top: 0.6rem;
-    outline: none;
-}
+
+
 
 .btn {
     display: inline-block;
@@ -133,12 +134,6 @@
     color: var(--cor-branco);
 }
 
-.erro,
-.msgError,
-.msgErrorSenha {
-    display: none;
-    color: var(--cor-vermelho-claro);
-}
 
 .errors {
     border-left: 3px solid var(--cor-vermelho-claro);

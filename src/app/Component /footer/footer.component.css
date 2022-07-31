@@ -50,6 +50,10 @@ hr {
     list-style: none;
 }
 
+.widget-list a:hover {
+    color: var(--bs-btn-border-color);
+}
+
 
 
 .icon-footer__content {
@@ -69,51 +73,11 @@ hr {
     font-size: 1.3rem;
     text-decoration: none;
 }
+.Copyright a:hover {
+    color: var(--bs-btn-bg);
+}
 .opacity-75{
     opacity: 0.5;
 }
 
 
-/* @media only screen and (max-width: 600px) {
-    .column-contents {
-        display: flex;
-        flex-direction: row;
-    }
-
-    .container {
-        padding: 0 1rem;
-    }
-
-    .container-produtos {
-        margin: 0px;
-        padding: 1rem;
-    }
-
-    .aplicativo-list {
-        text-align: center;
-    }
-
-    h3 {
-        font-size: 1.5rem;
-    }
-    ul{
-        text-align: center;
-        margin-bottom: 2rem;
-        padding: 0;
-    }
-
-    .icon-footer-alt {
-        display: flex;
-        align-items: stretch;
-    }
-
-    .Copyright a {
-        padding: 3rem;
-        font-size: .9rem;
-    }
-    .whapper-icon{
-        text-align: center;
-    }
-
-
-} */
