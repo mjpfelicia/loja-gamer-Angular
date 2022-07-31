@@ -1,7 +1,7 @@
 # LojaGamer
 
 ![Design](./src/assets/imagens/descktoplojaGamer.png)
-![Design](./src/assets/imagens/tabletLojaGamer.png)
+![Design](./src/assets/imagens/tabletLogaGamer.png)
 ![Design](./src/assets/imagens/mobileLojaGamer.png)
 
 
