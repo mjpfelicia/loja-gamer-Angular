@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { CarroselImage } from 'src/app/Component /carousel/carrosel.component';
-
+import { CarroselImage } from 'src/app/componentes/carousel/carrosel.component';
 @Component({
   selector: 'app-banner-principal',
   templateUrl: './banner-principal.component.html',

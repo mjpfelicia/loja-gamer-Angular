@@ -1,6 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { CardProduto } from 'src/app/Component /card/card.component';
-import { CarroselImage } from '../../Component /carousel/carrosel.component'
 
 @Component({
   selector: 'app-home',
@@ -9,13 +7,12 @@ import { CarroselImage } from '../../Component /carousel/carrosel.component'
 })
 export class HomeComponent implements OnInit {
   title = 'carrousel ';
-
-  
   
 
   constructor() { }
 
   ngOnInit(): void {
   }
+
 
 }

@@ -1,5 +1,5 @@
 import { InputModalityDetector } from '@angular/cdk/a11y';
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { Tooltip } from 'bootstrap'
 
 export interface CardProduto {
@@ -17,15 +17,10 @@ export interface CardProduto {
   styleUrls: ['./card.component.css']
 })
 
+
 export class CardComponent implements OnInit {
 
-  @Input() produto: CardProduto ={
-    detalhe: '',
-    imageSrc: '',
-    title: '',
-    precoSemDescont: 0,
-    precoComDescont: 0
-  };
+  @Input()produto?: CardProduto
 
   constructor() { }
 
@@ -34,5 +29,6 @@ export class CardComponent implements OnInit {
     tooltipTriggerList.forEach(t => new Tooltip(t)) 
   }
 
+  
 }
 

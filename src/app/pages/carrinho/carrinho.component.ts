@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit } from '@angular/core';
+import { CardProduto } from 'src/app/componentes/card/card.component';
 
 @Component({
   selector: 'app-carrinho',
@@ -7,9 +8,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CarrinhoComponent implements OnInit {
 
+
+  produtos:CardProduto[] = []
+
   constructor() { }
 
   ngOnInit(): void {
+
   }
+
+
 
 }

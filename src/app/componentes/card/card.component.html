@@ -1,4 +1,4 @@
-<div class="card-wrapper" *ngIf="produto" fxLayoutJustify="center" >
+<div class="card-wrapper" *ngIf="produto" fxLayoutJustify="center">
   <mat-card class="card">
     <mat-card-header>
       <mat-card-subtitle class="desconto">{{produto.detalhe}}</mat-card-subtitle>
@@ -9,9 +9,10 @@
       <mat-card-title data-bs-toggle="tooltip" data-bs-placement="bottom" title={{produto.title}} class="card-title">
         {{produto.title}}
       </mat-card-title>
-      
-           <mat-list role="list">
-        <mat-list-item role="listitem" class="mat-card-item-precoAtual">DE R$:{{produto.precoSemDescont}} por:</mat-list-item>
+
+      <mat-list role="list">
+        <mat-list-item role="listitem" class="mat-card-item-precoAtual">DE R$:{{produto.precoSemDescont}} por:
+        </mat-list-item>
         <mat-list-item role="listitem" class="mat-card-item-precoDesconto">R${{produto.precoComDescont}}</mat-list-item>
         <mat-list-item role="listitem">à vista</mat-list-item>
       </mat-list>
@@ -24,5 +25,3 @@
 </div>
 
 <div>
-
-  

@@ -1,5 +1,5 @@
 import { Component, OnInit} from '@angular/core';
-import { CarroselImage } from 'src/app/Component /carrosel-lancamento/carrosel-lancamento.component';
+import { CarroselImage } from 'src/app/componentes/carrosel-lancamento/carrosel-lancamento.component';
 
 @Component({
   selector: 'app-lancamento',

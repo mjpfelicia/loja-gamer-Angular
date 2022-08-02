@@ -1,18 +1,20 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
+
 import { AppRoutingModule } from './app-routing.module';
+import { LogimComponent } from './pages/login/login.component';
+
+import { HomeComponent } from './pages/home/home.component';
+
 import { FormsModule } from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
-import { HeaderComponent } from './Component /header/header.component';
-import { FooterComponent } from './Component /footer/footer.component';
-import { LogimComponent } from './pages/login/login.component';
-import { CarrinhoComponent } from './pages/carrinho/carrinho.component';
+import { HeaderComponent } from './componentes/header/header.component';
+import { FooterComponent } from './componentes/footer/footer.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { HomeComponent } from './pages/home/home.component';
-import { CarroselComponent } from './Component /carousel/carrosel.component';
-import { CardComponent } from './Component /card/card.component';
+import { CarroselComponent } from './componentes/carousel/carrosel.component';
+import { CardComponent } from './componentes/card/card.component';
 import { MatCardModule } from '@angular/material/card';
 import { MatButtonModule } from '@angular/material/button'
 import { MatIconModule, MatIconRegistry } from '@angular/material/icon';
@@ -22,15 +24,16 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatTabsModule } from '@angular/material/tabs';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { MatInputModule } from '@angular/material/input';
-import { ProdutosOfertasComponent } from './Component /produtos-ofertas/produtos-ofertas.component';
+import { ProdutosOfertasComponent } from './componentes/produtos-ofertas/produtos-ofertas.component';
 import { MatTooltipModule } from '@angular/material/tooltip';
-import { LancamentoComponent } from './Component /lancamento/lancamento.component';
-import { BannerPrincipalComponent } from './Component /banner-principal/banner-principal.component';
-import { ProdutoMomentosComponent } from './Component /produto-momentos/produto-momentos.component';
-import { CardqueridinhosComponent } from './Component /cardqueridinhos/cardqueridinhos.component';
-import { CarroselMarcasComponent } from './Component /carrosel-marcas/carrosel-marcas.component';
-import { CarroselLancamentoComponent } from './Component /carrosel-lancamento/carrosel-lancamento.component';
-import { DestaqueComponent } from './Component /destaque/destaque.component';
+import { LancamentoComponent } from './componentes/lancamento/lancamento.component';
+import { BannerPrincipalComponent } from './componentes/banner-principal/banner-principal.component';
+import { ProdutoMomentosComponent } from './componentes/produto-momentos/produto-momentos.component';
+import { CardqueridinhosComponent } from './componentes/cardqueridinhos/cardqueridinhos.component';
+import { CarroselMarcasComponent } from './componentes/carrosel-marcas/carrosel-marcas.component';
+import { CarroselLancamentoComponent } from './componentes/carrosel-lancamento/carrosel-lancamento.component';
+import { DestaqueComponent } from './componentes/destaque/destaque.component';
+import { CarrinhoComponent } from './pages/carrinho/carrinho.component';
 
 @NgModule({
   declarations: [
@@ -38,7 +41,6 @@ import { DestaqueComponent } from './Component /destaque/destaque.component';
     HeaderComponent,
     FooterComponent,
     LogimComponent,
-    CarrinhoComponent,
     HomeComponent,
     CardComponent,
     CarroselComponent,
@@ -50,7 +52,7 @@ import { DestaqueComponent } from './Component /destaque/destaque.component';
     CarroselMarcasComponent,
     CarroselLancamentoComponent,
     DestaqueComponent,
-
+    CarrinhoComponent,
   ],
 
   imports: [
@@ -70,7 +72,6 @@ import { DestaqueComponent } from './Component /destaque/destaque.component';
     FormsModule,
     HttpClientModule,
     ReactiveFormsModule,
-     
 
   ],
 
