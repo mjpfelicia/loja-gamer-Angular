@@ -10,18 +10,31 @@
     transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out;
 }
 
-.departamento{
+.departamento {
     color: var(--cor-active-color);
 }
-
-.mat-icon{
-    color: var(--cor-vermelho-claro);
-    font-size: 2rem;
-    height: 35px;
-    width: 35px;
+#contadorProduto {
+    height: 1rem;
+    background: var(--cor-vermelho-claro);
+}
+.menu-bars{
+    border: none;
+}
+.navbar-toggler:focus {
+    
+     box-shadow: none;
 }
 
-.span-icon{
+.text-icon {
     color: var(--cor-vermelho-claro);
-
 }
+@media only screen and (max-width: 991px){
+    .card-icons-header{
+        gap: 2rem;
+        padding-top: 1rem;
+    }
+    .input-group {
+        padding-top: 1rem;
+    }
+}
+

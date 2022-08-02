@@ -1,0 +1,35 @@
+.img-lancamneto {
+    height: 500px;
+}
+
+.box-carrosel {
+    background: var(--cor-azul-acinzentado-claro);
+}
+
+.carousel-lancamento {
+    bottom: 21rem !important;
+}
+
+.conteudo-titulo {
+    height: 100px;
+    border-bottom: 1px solid var(--cor-border);
+}
+
+.title-lancamento {
+    font-size: calc(1.3rem + 0.6vw);
+    color: var(--cor-cinzento-title);
+    font-weight: 600;
+    opacity: 0.9;
+
+}
+
+.title-produto-lancamento {
+    font-size: calc(1.325rem + 0.9vw);
+    color: var(--cor-azul-suave);
+
+}
+
+.link-lancamento {
+    color: var(--cor-vermelho-claro);
+    font-size: 1.5rem;
+}

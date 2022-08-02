@@ -1,22 +1,23 @@
 @import url('https://fonts.googleapis.com/css2?family=Barlow:wght@600&family=Fraunces:opsz,wght@9..144,700;9..144,900&family=Open+Sans:wght@500;700&family=PT+Serif:wght@700&family=Roboto:wght@400;700&display=swap');
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+@import url('../node_modules/bootstrap-icons/font/bootstrap-icons.css');
+body {
+    font-family: "Roboto";
+    cursor: pointer;
 }
 
-body {
-    font-family: "Roboto", "Helvetica Neue", sans-serif;
-    height: 100%;
-    cursor: pointer;
+*,
+*::before,
+*::after {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
 }
 
 :root {
     --cor-azul: #0d6efd;
     --cor-azul-suave: hsl(231, 69%, 60%);
     --cor-azul-claro: rgba(105, 179, 254, .09);
-    --cor-azul-escuro: hsl(233, 26%, 24%);
+    --cor-escuro: rgba(0, 0, 0, 0.9);
     --cor-azul-footer: #2b3445;
     --cor-azul-acinzentado-claro: hsl(220, 16%, 96%);
     --cor-branco: hsl(0, 0%, 100%);
@@ -24,47 +25,14 @@ body {
     --cor-cinza: #4b566b;
     --cor-ciano-brilhante: hsl(192, 70%, 51%);
     --cor-cinzento-title: #373f50;
-    --cor-active-color: rgba(0, 0, 0, 0.9);
     --cor-card: #f8f9fa;
     --cor-cinzento: #dae1e7;
     --cor-cinza-muito-claro: hsl(0, 0%, 98%);
     --cor-cinza-box-: hsl(220deg 43% 99%);
     --cor-verde-limao: hsl(136, 65%, 51%);
-    --cor-green: #198754;
     --cor-vermelho-claro: hsl(0, 94%, 66%);
-    --cor-amarelo: #dec129;
-    --cor-amarelo-claro: #efefef;
-    --bs-light-rgb: rgb(248 249 250);
-    --bs-text-opacity: 1;
-    --bs-border-radius: 0.375rem;
-    --bs-border-radius: 0.375rem;
-    --bs-btn-color: #fff;
-    --bs-btn-bg: #dc3545;
-    --bs-btn-border-color: #dc3545;
-    --bs-btn-hover-color: #fff;
-    --bs-btn-hover-bg: #bb2d3b;
-    --bs-btn-hover-border-color: #b02a37;
-    --bs-gutter-x: 1.5rem;
-    --bs-gutter-y: 0;
-
 }
-
-
-/* a {
-    text-decoration: underline;
-    transition: 4s;
+.icon-color-red {
+    color: var(--cor-vermelho-claro);
+    font-size: 1.3rem;
 }
-
-li {
-    text-decoration: none;
-    list-style: none;
-} */
-img{
-    width: 100;
-}
-
-
-
-
-
-

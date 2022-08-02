@@ -1,0 +1,67 @@
+.span-principal {
+    color: var(--cor-azul-suave);
+}
+
+.preco-atual-em-estoque {
+    color: var(--cor-vermelho-claro) !important;
+    font-size: 1rem !important;
+}
+
+.preco-oferta {
+    color: var(--cor-verde-limao) !important;
+    font-size: 1rem !important;
+}
+
+.preco-Avista {
+    color: var(--cor-cinza) !important;
+    font-size: 1rem !important;
+}
+
+.btn-compra {
+    color: var(--cor-branco);
+    background: var(--cor-vermelho-claro);
+}
+
+.conteudo-vendas {
+    background-color: var(--cor-azul-acinzentado-claro);
+    padding-top: 5rem;
+}
+
+.card-img-top {
+    width: 50%;
+    align-self: center;
+}
+
+.card-title {
+    color: var(--cor-cinzento-title);
+    font-size: 1.1rem;
+}
+
+.link-vejamais {
+    color: var(--cor-vermelho-claro);
+    text-decoration: none;
+
+}
+
+.title-oportunidade {
+    color: var(--cor-cinzento-title);
+    font-weight: 600;
+    opacity: 0.9;
+}
+
+.card:hover {
+    box-shadow: 0px 5px 10px 10px rgba(191, 187, 187, 0.2);
+}
+
+.card {
+    background: var(--cor-card);
+    border: 1px solid var(--cor-azul-acinzentado-claro);
+}
+.desconto {
+    width: 3rem;
+    color: var(--cor-branco);
+    line-height: 1.5rem;
+    background: var(--cor-vermelho-claro);
+    border-radius: 0.2rem;
+    margin: 0.9rem;
+}

@@ -10,27 +10,27 @@
                 <button class="navbar-toggler menu-bars collapsed" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false"
                     aria-label="Toggle navigation">
-                    <mat-icon>menu</mat-icon>
+                    <fa-icon class="icon-color-red" [icon]="faBars"></fa-icon>
                 </button>
 
                 <div class="navbar-collapse w-100 collapse" id="navbarCollapse">
                     <div class="navbar-nav">
                         <div class="nav-item">
-                            <a class="nav-link active departamento" aria-current="page" href="#">Departamentos</a>
+                            <a class="nav-link active departamento" aria-current="page" routerLink="">Departamentos</a>
                         </div>
                         <div class="nav-item">
-                            <a class="nav-link" href="#">Destaques</a>
+                            <a class="nav-link" routerLink="">Destaques</a>
                         </div>
 
                         <div class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+                            <a class="nav-link dropdown-toggle" routerLink="" id="navbarDropdownMenuLink" role="button"
                                 data-bs-toggle="dropdown" aria-expanded="false">
                                 Contatos
                             </a>
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                                <li><a class="dropdown-item border-bottom" href="#">Telefones</a></li>
-                                <li><a class="dropdown-item border-bottom" href="#">Endereço</a></li>
-                                <li><a class="dropdown-item" href="#">Parceiros</a></li>
+                                <li><a class="dropdown-item border-bottom" routerLink="">Telefones</a></li>
+                                <li><a class="dropdown-item border-bottom" routerLink="">Endereço</a></li>
+                                <li><a class="dropdown-item" routerLink="">Parceiros</a></li>
                             </ul>
                         </div>
                     </div>
@@ -38,30 +38,32 @@
                         <input type="text" class="form-control" placeholder="Pesquisar produtos"
                             aria-label="Pesquisar produtos" aria-describedby="basic-addon2">
                         <p class="input-group-text mb-0" id="basic-addon2">
-                            <img class="svgLupa" src="assets/imagens/search.svg" alt="svgLupa">
+                            <fa-icon [icon]="faSearch"></fa-icon>
                         </p>
                     </div>
 
                     <div class="navbar-nav flex-row d-flex card-icons-header">
                         <div class="nav-item ms-lg-n4 d-flex align-items-center">
-                            <a class="nav-link" href="#">
-                                <mat-icon>favorite_border</mat-icon>
+                            <a class="nav-link" routerLink="">
+                                <i class="bi bi-heart icon-color-red"></i>
                             </a>
                         </div>
                         <div class="nav-item ms-lg-n4 d-flex align-items-center">
                             <a routerLink="/login">
-                                <mat-icon aria-hidden="false" aria-label="Chave">person</mat-icon>
+                                <i class="bi bi-person icon-color-red"></i>
                             </a>
-                            <span class="span-icon">login</span>
+                            <span class="text-icon">login</span>
                         </div>
                         <div class="nav-item ms-lg-n4 d-flex align-items-center">
                             <a routerLink="/carrinho" class="nav-link position-relative">
                                 <span id="contadorProduto"
-                                    class="position-absolute translate-middle badge rounded-pill bg-danger">
+                                    class="position-absolute top-0 start-100 translate-middle p-2 bg-danger border border-light rounded-circle">
+                                    <span class="visually-hidden">New alerts</span>
                                 </span>
-                                <mat-icon >shopping_cart_checkout</mat-icon>
+                                <i class="bi bi-cart4 icon-color-red"></i>
                             </a>
-                            <span class="span-icon">carrinho</span>
+
+                            <span class="text-icon">carrinho</span>
                         </div>
 
                     </div>

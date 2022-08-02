@@ -1,16 +1,8 @@
-const btnList = document.querySelectorAll(".btn-comprar");
+$(document).ready(function () {
 
-btnList.forEach(btn => {
+    $(".btn-compra").click(function () {
+        alert("Este produto não está disponível");
+    });
 
-    btn.addEventListener("click", (produto) => {
-        console.warn({ produto })
-    })
+});
 
-})
-
-function addProduto(produto) {  
-    console.log({ produto})
-}
-
-
-console.warn("import script")

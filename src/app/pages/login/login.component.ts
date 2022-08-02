@@ -1,5 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
+import { faUser } from '@fortawesome/free-solid-svg-icons';
+
 
 
 
@@ -16,8 +18,10 @@ export interface LogimComponent {
 })
 export class LogimComponent implements OnInit {
   logimComponent!: FormGroup;
-  
-  
+  faUser = faUser;
+
+
+
 
   constructor() { }
 
@@ -52,13 +56,13 @@ export class LogimComponent implements OnInit {
     }
   }
 
-  submitCadastro() : void{
+  submitCadastro(): void {
     console.log('Formulário válido');
     console.log(this.logimComponent)
     if (this.logimComponent.validator) {
       return
     }
-}
+  }
 
 
 }
