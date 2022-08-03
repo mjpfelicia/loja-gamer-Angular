@@ -1,0 +1,31 @@
+
+.page-carrinho{
+    background: var(--cor-azul-footer);
+}
+.product-title a{
+    font-size: 1rem;
+    color: var(--cor-cinzento-title)!important;
+}
+.text-accent{
+    color: var(--cor-ciano-brilhante);
+}
+.fw-normal{
+    color: var(--cor-vermelho-claro)!important;
+}
+
+.btn-outline-accent {
+    border-color: rgba(78,84,200,.35);
+}
+.btn-outline-accent:hover {
+    color: var(--cor-branco);
+    background: var(--cor-vermelho-claro);
+    
+}
+img{
+    width: 60%;
+}
+
+a{
+    list-style: none;
+    text-decoration: none;
+}

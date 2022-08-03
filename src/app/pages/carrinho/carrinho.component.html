@@ -1,0 +1,170 @@
+<div class="page-title-overlap pt-4 page-carrinho">
+    <div class="container d-lg-flex justify-content-between py-2 py-lg-3">
+        <div class="order-lg-2 mb-3 mb-lg-0 pt-lg-2">
+            <nav aria-label="breadcrumb">
+                <ol
+                    class="breadcrumb breadcrumb-light align-items-center flex-lg-nowrap justify-content-center justify-content-lg-start">
+                    <li class="breadcrumb-item">
+                        <a class="text-nowrap text-white" routerLink="/">
+                            <i class="bi bi-house icon-color-red"></i>
+                            Home
+                        </a>
+                    </li>
+                    <li class="breadcrumb-item text-nowrap">
+                        <a class="text-nowrap text-white" routerLink="/carrinho">Carrinho</a>
+                    </li>
+                </ol>
+            </nav>
+        </div>
+        <div class="order-lg-1 pe-lg-4 text-center text-lg-start">
+            <h1 class="h3 text-light mb-0">Seu carrinho</h1>
+        </div>
+    </div>
+</div>
+<div class="container pb-5 mb-2 mb-md-4">
+    <div class="row">
+        <!-- List of items-->
+        <section class="col-lg-8">
+            <div class="d-flex justify-content-between align-items-center pt-3 pb-4 pb-sm-5 mt-1">
+                <h2 class="h6 text-light mb-0">Produtos</h2>
+                <a class="btn btn-outline-primary btn-sm ps-2" routerLink="/">
+                    <i class="bi bi-chevron-compact-left  me-2"></i>
+                    Continue shopping
+                </a>
+            </div>
+            <!-- Item-->
+            <div class="d-sm-flex justify-content-between align-items-center my-2 pb-3 border-bottom">
+                <div class="d-block d-sm-flex align-items-center text-center text-sm-start">
+                    <a class="d-inline-block flex-shrink-0 mx-auto me-sm-4" href="#">
+                        <img src="./assets/imagens/foneRosa.jpg" class="card-img-top" alt="Product">
+                    </a>
+                    <div class="pt-2">
+                        <h3 class="product-title fs-base mb-2">
+                            <a href="#">
+                                HEADSET GAMER REDRAGON
+                            </a>
+                        </h3>
+
+                        <div class="fs-lg text-accent pt-2">R$139<small>00</small></div>
+                    </div>
+                </div>
+                <div class="pt-2 pt-sm-0 ps-sm-3 mx-auto mx-sm-0 text-center text-sm-start" style="max-width: 9rem;">
+                    <label class="form-label" for="quantity1">Quantidade</label>
+                    <input class="form-control" type="number" id="quantity1" min="1" value="1">
+                    <button class="btn btn-link px-0 text-danger" type="button">
+                        <i class="bi bi-x-circle me-2"></i>
+                        <span class="fs-sm">Remover</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Item-->
+            <div class="d-sm-flex justify-content-between align-items-center my-2 pb-3 border-bottom">
+                <div class="d-block d-sm-flex align-items-center text-center text-sm-start">
+                    <a class="d-inline-block flex-shrink-0 mx-auto me-sm-4" href="#">
+                        <img src="assets/imagens/cadeira-gamer.jpg" class="card-img-top" alt="Product">
+                    </a>
+                    <div class="pt-2">
+                        <h3 class="product-title fs-base mb-2">
+                            <a href="#">
+                                CADEIRA GAMER
+                            </a>
+                        </h3>
+
+                        <div class="fs-lg text-accent pt-2">R$1.249<small>50</small></div>
+                    </div>
+                </div>
+                <div class="pt-2 pt-sm-0 ps-sm-3 mx-auto mx-sm-0 text-center text-sm-start" style="max-width: 9rem;">
+                    <label class="form-label" for="quantity2">Quantidade</label>
+                    <input class="form-control" type="number" id="quantity2" min="1" value="1">
+                    <button class="btn btn-link px-0 text-danger" type="button">
+                        <i class="bi bi-x-circle me-2"></i>
+                        <span class="fs-sm">Remover</span>
+                    </button>
+                </div>
+            </div>
+
+            <button class="btn btn-outline-accent d-block w-100 mt-4" type="button">
+                <i class="bi bi-arrow-clockwise"></i>
+                Atualizar carrinho
+            </button>
+        </section>
+        <!-- Sidebar-->
+        <aside class="col-lg-4 pt-4 pt-lg-0 ps-xl-5">
+            <div class="bg-white rounded-3 shadow-lg p-4">
+                <div class="py-2 px-xl-2">
+                    <div class="text-center mb-4 pb-3 border-bottom">
+                        <h2 class="h6 mb-3 pb-1">Subtotal</h2>
+                        <h3 class="fw-normal">$265.<small>00</small></h3>
+                    </div>
+                    <div class="mb-3 mb-4">
+                        <label class="form-label mb-3" for="order-comments">
+                            <span class="badge bg-info fs-xs me-2">Observação</span>
+                            <span class="fw-medium">Comentários adicionais</span>
+                        </label>
+                        <textarea class="form-control" rows="6" id="order-comments"></textarea>
+                    </div>
+                    <div class="accordion" id="order-options">
+                        <div class="accordion-item">
+                            <h3 class="accordion-header">
+                                <a class="accordion-button" href="#promo-code" role="button" data-bs-toggle="collapse"
+                                    aria-expanded="true" aria-controls="promo-code">
+                                    Aplicar código promocional
+                                </a>
+                            </h3>
+                            <div class="accordion-collapse collapse show" id="promo-code"
+                                data-bs-parent="#order-options">
+                                <form class="accordion-body needs-validation" method="post" novalidate="">
+                                    <div class="mb-3">
+                                        <input class="form-control" type="text" placeholder="código promocional"
+                                            required="">
+                                        <div class="invalid-feedback">Forneça o código promocional.</div>
+                                    </div>
+                                    <button class="btn btn-danger d-block w-100 list-unstyled" type="submit">
+                                        Aplicar promoção código
+                                    </button>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h3 class="accordion-header">
+                                <a class="accordion-button collapsed" href="#shipping-estimates" role="button"
+                                    data-bs-toggle="collapse" aria-expanded="true" aria-controls="shipping-estimates">
+                                    Estimativas de envio
+                                </a>
+                            </h3>
+                            <div class="accordion-collapse collapse" id="shipping-estimates"
+                                data-bs-parent="#order-options">
+                                <div class="accordion-body">
+                                    <form class="needs-validation">
+                                        <div class="mb-3">
+                                            <select class="form-select">
+                                                <option value="">Escolha seu país</option>
+                                                <option value="Australia">Australia</option>
+                                                <option value="United States">Brazil</option>
+                                                <option value="United States">Estados Unidos</option>
+                                            </select>
+                                        </div>
+
+                                        <div class="mb-3">
+                                            <input class="form-control" type="text" placeholder="CEP / Código Postal"
+                                                required="">
+                                            <div class="invalid-feedback">Forneça um CEP válido!</div>
+                                        </div>
+                                        <button class="btn btn-danger d-block w-100" type="submit">
+                                            Calcular envio
+                                        </button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <a class="btn btn-danger btn-shadow d-block w-100 mt-4" href="checkout-details.html">
+                        <i class="ci-card fs-lg me-2"></i>
+                        Fazer o check-out
+                    </a>
+                </div>
+            </div>
+        </aside>
+    </div>
+</div>

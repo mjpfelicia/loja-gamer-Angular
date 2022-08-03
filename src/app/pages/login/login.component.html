@@ -19,11 +19,11 @@
                 <div class="tab-content" id="myTabContent">
                     <div class="tab-pane fade show active" id="entra-tab-pane" role="tabpanel"
                         aria-labelledby="entra-tab" tabindex="0">
-                        <form id="form" action="/index.html" onsubmit="return false;" (ngSubmit)="submit()"
+                        <form id="form-entra"  onsubmit="return false;" (ngSubmit)="submit()"
                             [formGroup]="logimComponent" #formDir="ngForm">
                             <div class="whapper">
                                 <label class="form-label" for="description">Email</label>
-                                <input class="form-control" id="email" type="text" formControlName="email" required>
+                                <input class="form-control" id="description" type="text" formControlName="email" required>
                             </div>
                             <div *ngIf="email.invalid && formDir.submitted">
                                 <p *ngIf="email.errors?.['required']" class="errors">O endereço de e-mail não pode estar
@@ -76,7 +76,7 @@
                     </div>
                     <div class="tab-pane fade" id="cadastra-tab-pane" role="tabpanel" aria-labelledby="cadastra-tab"
                         tabindex="0">
-                        <form id="form" action="/index.html " onsubmit="return false;" (ngSubmit)="submitCadastro()"
+                        <form id="form-cadastra"  onsubmit="return false;" (ngSubmit)="submitCadastro()"
                             [formGroup]="logimComponent" #formDir="ngForm">
 
                             <div class="whapper">
