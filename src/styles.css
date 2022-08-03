@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Barlow:wght@600&family=Fraunces:opsz,wght@9..144,700;9..144,900&family=Open+Sans:wght@500;700&family=PT+Serif:wght@700&family=Roboto:wght@400;700&display=swap');
 @import url('../node_modules/bootstrap-icons/font/bootstrap-icons.css');
 body {
-    font-family: "Roboto";
+    font-family: "Roboto"!important;
     cursor: pointer;
 }
 
