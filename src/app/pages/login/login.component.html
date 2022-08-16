@@ -19,29 +19,28 @@
                 <div class="tab-content" id="myTabContent">
                     <div class="tab-pane fade show active" id="entra-tab-pane" role="tabpanel"
                         aria-labelledby="entra-tab" tabindex="0">
-                        <form id="form-entra"  onsubmit="return false;" (ngSubmit)="submit()"
-                            [formGroup]="logimComponent" #formDir="ngForm">
+                        <form id="form-entra" onsubmit="return false;" (ngSubmit)="signin()">
+                            <div class="whapper">
+                                <label class="form-label" for="description">Nome</label>
+                                <input class="form-control"  type="text" id="nome" placeholder="seu nome" name="nome"
+                                    [(ngModel)]="userModel.nome">
+                            </div>
                             <div class="whapper">
                                 <label class="form-label" for="description">Email</label>
-                                <input class="form-control" id="description" type="text" formControlName="email" required>
+                                <input class="form-control" type="email" id="usuario" placeholder="seu e-mail"
+                                    name="email" [(ngModel)]="userModel.email">
                             </div>
-                            <div *ngIf="email.invalid && formDir.submitted">
-                                <p *ngIf="email.errors?.['required']" class="errors">O endereço de e-mail não pode estar
-                                    vazio
-                                </p>
+                            <div>
+
                             </div>
                             <div class="whapper">
                                 <div class="conteudo-senha">
                                     <label class="form-label" for="description">Senha</label>
                                     <a class="form-text" href="#">Esqueceu a senha?</a>
                                 </div>
-                                <input class="form-control" name="loginSenha" id="Senha" placeholder="Senha"
-                                    type="password" formControlName="senha" required>
-                                <div *ngIf="senha.invalid && formDir.submitted" class="errors">
-                                    <p *ngIf="senha.errors?.['required']">
-                                        Preencha este campo corretamente.
-                                    </p>
-                                </div>
+
+                                <input class="form-control" type="password" id="password" placeholder="*****"
+                                    name="senha" [(ngModel)]="userModel.password">
                             </div>
                             <div class="whapper">
                                 <div class="form-check">
@@ -57,6 +56,7 @@
                                     Entrar
                                 </button>
                             </div>
+                            <p class="mensagem">{{mensagem}}</p>
                         </form>
                         <hr class="linha">
                         <div class="text-center conecte-se">
@@ -76,39 +76,22 @@
                     </div>
                     <div class="tab-pane fade" id="cadastra-tab-pane" role="tabpanel" aria-labelledby="cadastra-tab"
                         tabindex="0">
-                        <form id="form-cadastra"  onsubmit="return false;" (ngSubmit)="submitCadastro()"
-                            [formGroup]="logimComponent" #formDir="ngForm">
+                        <form id="form-cadastra" onsubmit="return false;">
 
                             <div class="whapper">
                                 <label class="form-label" for="registerName">Nome</label>
-                                <input class="form-control" id="registerName" type="text" formControlName="nome"
-                                    required>
-                            </div>
-                            <div *ngIf="nome.invalid && formDir.submitted">
-                                <p *ngIf="nome.errors?.['required']" class="errors">
-                                    Campo obrigatório
-                                </p>
+                                <input class="form-control" id="registerName" type="text" required>
                             </div>
 
                             <div class="whapper">
                                 <label class="form-label" for="email">Email</label>
-                                <input class="form-control" id="email" type="text" formControlName="email" required>
-                            </div>
-                            <div *ngIf="email.invalid && formDir.submitted">
-                                <p *ngIf="email.errors?.['required']" class="errors">O endereço de e-mail não pode estar
-                                    vazio
-                                </p>
+                                <input class="form-control" id="email" type="text">
                             </div>
 
                             <div class="whapper">
                                 <label class="form-label" for="registerPassword">Senha</label>
-                                <input class="form-control" id="registerPassword" type="password"
-                                    formControlName="senha">
-                                <div *ngIf="email.invalid && formDir.submitted">
-                                    <p *ngIf="senha.errors?.['required']" class="errors">
-                                        Preencha este campo corretamente.
-                                    </p>
-                                </div>
+                                <input class="form-control" id="registerPassword" type="password">
+
                             </div>
                             <div class="d-grid mb-3 text-center">
                                 <button id="buttonEnviarmsgErrorCadastro" class="btn" type="submit">
@@ -118,7 +101,7 @@
                             </div>
                         </form>
                         <hr class="linha">
-                        <p class="mensagem"></p>
+                        <p class="mensagem">{{mensagem}}</p>
                         <div class="text-center">
                         </div>
                     </div>
