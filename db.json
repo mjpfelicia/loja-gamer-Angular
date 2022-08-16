@@ -1,0 +1,28 @@
+{
+  "users": [
+    {
+      "email": "felicia@kkkkkkk",
+      "password": "$2a$10$QFhnqGy/equW4bGVDsevVOCvn8zaWfpJTwOof/dm1in05TE3py1au",
+      "nome": "sandra jesus",
+      "id": 1
+    },
+    {
+      "email": "maria@kkkkkk",
+      "password": "$2a$10$MxP4yFRjSjjC3REU.nNCpeqfXFV8pWGOfHW3MmGZOr2iq1dBu2Y0O",
+      "nome": "",
+      "id": 2
+    },
+    {
+      "email": "maria@teste",
+      "password": "$2a$10$8u/MqAI2n8ANGT4r1VNaeukPhXV.ZjUteMxufQCmWdavm0nXQGYOW",
+      "nome": "",
+      "id": 3
+    },
+    {
+      "email": "sandra@kkkkkkk",
+      "password": "$2a$10$F9yGIdBaoiyannBpnIcXWOJGgQuke09/FcoZ0aahQI8JZSX0d.BNO",
+      "nome": "sandra",
+      "id": 4
+    }
+  ]
+}
