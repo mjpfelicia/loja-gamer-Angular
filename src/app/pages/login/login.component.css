@@ -135,7 +135,8 @@
 }
 
 
-.errors {
+.errors,
+.mensagem {
     border-left: 3px solid var(--cor-vermelho-claro);
     padding-left: .2em;
     color: var(--cor-vermelho-claro);
