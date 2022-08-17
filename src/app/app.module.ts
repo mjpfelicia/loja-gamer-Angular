@@ -19,7 +19,8 @@ import { LancamentoComponent } from './componentes/sectionLancamento/lancamento.
 import { CarroselMarcasComponent } from './componentes/sectionMarcas/carrosel-marcas.component';
 import { DestaqueComponent } from './componentes/sectionNovaschegadas/destaque.component';
 import { FooterComponent } from './componentes/footer/footer.component';
-import { FontAwesomeModule } from "@fortawesome/angular-fontawesome"
+import { FontAwesomeModule } from "@fortawesome/angular-fontawesome";
+import { TesteComponent } from './componente/teste/teste.component';
 
 
 
@@ -36,7 +37,8 @@ import { FontAwesomeModule } from "@fortawesome/angular-fontawesome"
     LancamentoComponent,
     CarroselMarcasComponent,
     DestaqueComponent,
-    FooterComponent
+    FooterComponent,
+    TesteComponent,
   ],
 
   imports: [
