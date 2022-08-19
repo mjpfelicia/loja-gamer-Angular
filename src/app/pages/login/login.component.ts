@@ -38,16 +38,17 @@ export class LogimComponent implements OnInit {
 
   // function validar ataques SQL Injection
   vadidatePalavrasProibidas(email: string | undefined): boolean {
-    const palavrasProibidas = ["select", "105", "OR", "1 = 1","=","Where","DELETE","Insert","Create","table"];
+    const palavrasProibidas = ["select", "105", "or", "1 = 1","=","where","delete","insert","create","table"];
+
 
     if (!email) {
       return false;
     }
     //  procura palavra proibida e bloquia a primeira lavra que encontra 
-    const searchPalavraProibida = (palavra: string) => email.search(palavra) > -1
-    const entrondata = palavrasProibidas.find(searchPalavraProibida)
-    console.log("Palavra proibida encontrada:", entrondata)
-    return !entrondata
+    const searchPalavraProibida = (palavra: string) => email.toLowerCase().search(palavra) > -1
+    const encontrada = palavrasProibidas.find(searchPalavraProibida)
+    console.log("Palavra proibida encontrada:", encontrada)
+    return !encontrada
   }
 
 

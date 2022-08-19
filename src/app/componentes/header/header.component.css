@@ -28,6 +28,10 @@
 .text-icon {
     color: var(--cor-vermelho-claro);
 }
+.nav-item a{
+    text-decoration: none;
+
+}
 @media only screen and (max-width: 991px){
     .card-icons-header{
         gap: 2rem;
