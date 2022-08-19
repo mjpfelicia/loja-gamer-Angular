@@ -2,10 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { faUser } from '@fortawesome/free-solid-svg-icons';
 import { User } from 'src/app/models/models.component';
 import { UserService } from 'src/app/services/user.service';
-
-
-
-
+import { Router } from '@angular/router';
 
 export interface LogimComponent {
   id?: string;
@@ -20,66 +17,96 @@ export interface LogimComponent {
 })
 export class LogimComponent implements OnInit {
   faUser = faUser;
-  
-  
-  constructor
-  (private userService: UserService)
-  { }
-  
-  ngOnInit(): void {
-    
-  }
-
-
   mensagem: string = ""
   userModel = new User();
 
+  constructor
+    (private userService: UserService,
+      private router: Router) { }
+
+  ngOnInit(): void {
+
+  }
 
 
-  validaLogin(): boolean {
-    if (//falta preencher campos
-      this.userModel.nome === undefined || this.userModel.nome === '' || 
-      this.userModel.email === undefined || this.userModel.email === '' ||
-      this.userModel.password === undefined || this.userModel.password === ''
-    ) { 
+
+  //  function validar email 
+  validateEmail(email: string | undefined): boolean {
+    const validarEmail = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    return validarEmail.test(String(email).toLowerCase());
+  }
+
+  // function validar ataques SQL Injection
+  vadidatePalavrasProibidas(email: string | undefined): boolean {
+    const palavrasProibidas = ["select", "105", "OR", "1 = 1","=","Where","DELETE","Insert","Create","table"];
+
+    if (!email) {
       return false;
-    } else {
-      return true;
     }
+    //  procura palavra proibida e bloquia a primeira lavra que encontra 
+    const searchPalavraProibida = (palavra: string) => email.search(palavra) > -1
+    const entrondata = palavrasProibidas.find(searchPalavraProibida)
+    console.log("Palavra proibida encontrada:", entrondata)
+    return !entrondata
   }
 
+
+  validaLogin(user: User): boolean {
+
+    //validar campos 
+    if (
+      !user.nome ||
+      !user.email ||
+      !user.password
+    ) {
+      console.error('falta dados do usuario: ', { user });
+      return false;
+    }
+
+    if (!this.vadidatePalavrasProibidas(user.email)) {
+      console.error('email com palavras proibidas: ', this.userModel);
+      return false;
+    }
+
+    if (!this.validateEmail(user.email)) {
+      console.error('email invalido: ', this.userModel);
+      return false;
+    }
+
+    return true;
+
+  }
+
+
+  //fazer validação login e logar com API
   signin() {
-    //fazer validação
-    if ( this.validaLogin() ) { //pode cadastrar?
+    if (!this.validaLogin(this.userModel)) {
       console.log(this.userModel);
-      this.userService.sigin(this.userModel)
-        .subscribe(
-          {
-            next: (response) => {
-              console.log(response);
-              this.mensagem = `Logado com Sucesso! ${response.status} ${response.statusText}`
-
-            },
-            error: (e) => {
-              console.log('Usuário não encontrado', e);
-              // console.clear()
-              this.mensagem = `${e.error} ${e.status} ${e.statusText}`
-            }
-
-          }
-        )
-
-    } else {//falta preencher campos
-
-      console.log(this.userModel);
-      this.mensagem = "Preencher todos os campos"
+      this.mensagem = "preencher corretamente todos os campos."
+      return;
     }
+
+    this.userService.sigin(this.userModel)
+      .subscribe(
+        {
+          next: (response) => {
+            console.log(response);
+            this.mensagem = `Logado com Sucesso! ${response.status} ${response.statusText}`
+            this.router.navigate(['']);
+          },
+          error: (e) => {
+            console.error('Usuário não encontrado', e);
+            this.mensagem = `${e.error} ${e.status} ${e.statusText}`
+          }
+
+        }
+      )
+
   }
 
 
- 
-  
 }
+
 
 
 

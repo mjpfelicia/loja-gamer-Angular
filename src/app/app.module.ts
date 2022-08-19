@@ -20,7 +20,6 @@ import { CarroselMarcasComponent } from './componentes/sectionMarcas/carrosel-ma
 import { DestaqueComponent } from './componentes/sectionNovaschegadas/destaque.component';
 import { FooterComponent } from './componentes/footer/footer.component';
 import { FontAwesomeModule } from "@fortawesome/angular-fontawesome";
-import { TesteComponent } from './componente/teste/teste.component';
 
 
 
@@ -38,7 +37,6 @@ import { TesteComponent } from './componente/teste/teste.component';
     CarroselMarcasComponent,
     DestaqueComponent,
     FooterComponent,
-    TesteComponent,
   ],
 
   imports: [

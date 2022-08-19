@@ -23,6 +23,12 @@
       "password": "$2a$10$F9yGIdBaoiyannBpnIcXWOJGgQuke09/FcoZ0aahQI8JZSX0d.BNO",
       "nome": "sandra",
       "id": 4
+    },
+    {
+      "email": "sandra@sandra.com",
+      "password": "$2a$10$d5Ao3O2.OWOtx3oznu.aEe2cpQqeHS8hZFAyOYdhm37xg4miw4DcO",
+      "nome": "sandra",
+      "id": 5
     }
   ]
 }
