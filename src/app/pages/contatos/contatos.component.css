@@ -1,0 +1,30 @@
+.maps {
+    z-index: 1000;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+    border: none;
+}
+
+.u-section{
+    min-height: 800px;
+    color: var(--cor-title);
+    background: var(--cor-border);
+}
+.title{
+    text-transform: uppercase;
+    font-weight:500;
+    font-size: 3rem;
+    padding-bottom: 2rem;
+}
+
+a{
+    color: var(--cor-title);
+    text-decoration: none;
+}
+
+
+
+
